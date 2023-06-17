@@ -7,7 +7,7 @@
 /**
  * main - Start point
  *
- * find the sign of n  
+ * find the sign of n 
  *
  * Return: Always 0 (Success)
  */
