@@ -3,11 +3,8 @@
 /* more headers goes there */
 #include <stdio.h>
 /* betty style doc for function main goes there */
-
 /**
  * main - Start point
- *
- * find the sign of n 
  *
  * Return: Always 0 (Success)
  */
