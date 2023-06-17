@@ -8,19 +8,15 @@ int main(void)
 {
 	int a;
 	int b;
-	int sb;
 	int c;
-	int sc;
 
 	a = '0';
-	sb = '1';
-	sc = '2';
 	while (a <= '9')
 	{
-		b = sb;
+		b = a + 1;
 		while (b <= '9')
 		{
-			c = sc;
+			c = b + 1;
 			while (c <= '9')
 			{
 				putchar(a);
@@ -33,10 +29,8 @@ int main(void)
 				}
 				c++;
 			}
-			sc++;
 			b++;
 		}
-		sb++;
 		a++;
 	}
 	putchar('\n');
