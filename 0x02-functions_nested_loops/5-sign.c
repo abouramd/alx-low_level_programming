@@ -5,12 +5,14 @@
  *
  * @n: hte number passed to the function
  *
- * Return: 1 if n is greater than zero, 0 if n is zero, -1 if n is less than zero
+ * Return: 1 if n is greater than zero,
+ * 0 if n is zero, -1 if n is less than zero
  */
 
 int print_sign(int n)
 {
 	int ret = 0;
+
 	if (n > 0)
 	{
 		_putchar('+');
@@ -24,5 +26,5 @@ int print_sign(int n)
 	}
 	else
 		_putchar('0');
-	return ret;
+	return (ret);
 }
