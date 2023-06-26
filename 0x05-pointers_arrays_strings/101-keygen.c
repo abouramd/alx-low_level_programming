@@ -11,12 +11,13 @@ int main(void)
 	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQSTUVWXYZ";
 	char s[33];
 	int sum;
+	int i;
 
 	srand(time(NULL));
 	while (1)
 	{
 		sum = 0;
-		for (int i = 0; i < 33; i++)
+		for (i = 0; i < 33; i++)
 		{
 			s[i] = alpha[rand() % (sizeof(alpha) - 1)];
 			sum += s[i];
