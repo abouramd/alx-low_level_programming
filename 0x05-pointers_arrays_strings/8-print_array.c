@@ -32,7 +32,7 @@ void print_array(int *a, int n)
 	int index;
 
 	index = 0;
-	while (index < a)
+	while (index < n)
 	{
 		_putn(a[index++]);
 		if (index == n)
