@@ -22,6 +22,6 @@ int _atoi(char *s)
 		n = n * 10 + *s - 48;
 		s++;
 	}
-	
+
 	return (n * sign);
 }
