@@ -20,7 +20,7 @@ char *leet(char *str)
 		while (s[a])
 		{
 			if (str[i] == s[a] || str[i] == S[a])
-				str[i] = s[a];
+				str[i] = d[a];
 			a++;
 		}
 		i++;
