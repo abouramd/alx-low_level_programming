@@ -7,7 +7,7 @@
  * Return: 0 if is the same else the diff between them
  */
 
-char *_strcmp(char *dest, char *src)
+int _strcmp(char *dest, char *src)
 {
 	int i;
 
@@ -16,7 +16,7 @@ char *_strcmp(char *dest, char *src)
 	{
 		if (dest[i] != src[i])
 			return (dest[i] - src[i]);
-	i++;
+		i++;
 	}
 	return (0);
 }
