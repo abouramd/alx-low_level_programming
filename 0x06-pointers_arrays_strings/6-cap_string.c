@@ -35,17 +35,15 @@ char *cap_string(char *str)
 
 	while (str[i])
 	{
+		if (_cmp(str[i]))
+			b = 1;
 		if (str[i] >= 'a' && str[i] <= 'z' && b)
 		{
 			str[i] = str[i] - 'a' + 'A';
-			b = 0;
 		}
 		else if (str[i] >= 'A' && str[i] <= 'Z')
 			str[i] = str[i] - 'A' + 'a';
-		if (_cmp(str[i]))
-			b = 1;
-		else
-			b = 0;
+		b = 0;
 		i++;
 	}
 	return (str);
