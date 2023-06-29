@@ -41,7 +41,7 @@ char *cap_string(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (i == 0 || _cmp(str[i - 1]) && str[i] >= 'a' && str[i] <= 'z')
+		if ((i == 0 || _cmp(str[i - 1])) && str[i] >= 'a' && str[i] <= 'z')
 			str[i] = str[i] - 'a' + 'A';
 		i++;
 	}
