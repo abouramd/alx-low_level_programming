@@ -1,26 +1,6 @@
 #include "main.h"
 
 /**
- * _cmp - search for a char in a string
- * @c: char that we are search for it
- * Return: 0 if not found, 1 if we found it
- */
-
-int _cmp(char c)
-{
-	char s[] = " \t\n,;.!?\"(){}";
-	int i = 0;
-
-	while (s[i])
-	{
-		if (s[i] == c)
-			return (1);
-		i++;
-	}
-	return (0);
-}
-
-/**
  * cap_string - capitalizes all words of a string
  *
  * @str: string pointer
@@ -30,20 +10,32 @@ int _cmp(char c)
 
 char *cap_string(char *str)
 {
-	int i = 0;
+	int index = 0;
 
-	while (str[i])
+	while (str[index])
 	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-			str[i] = str[i] - 'A' + 'a';
-		i++;
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+			index++;
+
+		if (str[index - 1] == ' ' ||
+		    str[index - 1] == '\t' ||
+		    str[index - 1] == '\n' ||
+		    str[index - 1] == ',' ||
+		    str[index - 1] == ';' ||
+		    str[index - 1] == '.' ||
+		    str[index - 1] == '!' ||
+		    str[index - 1] == '?' ||
+		    str[index - 1] == '"' ||
+		    str[index - 1] == '(' ||
+		    str[index - 1] == ')' ||
+		    str[index - 1] == '{' ||
+		    str[index - 1] == '}' ||
+		    index == 0)
+			str[index] -= 32;
+
+		index++;
 	}
-	i = 0;
-	while (str[i])
-	{
-		if ((i == 0 || _cmp(str[i - 1])) && str[i] >= 'a' && str[i] <= 'z')
-			str[i] = str[i] - 'a' + 'A';
-		i++;
-	}
+
 	return (str);
 }
+
