@@ -12,8 +12,11 @@ int _cmp(char c)
 	int i = 0;
 
 	while (s[i])
+	{
 		if (s[i] == c)
 			return (1);
+		i++;
+	}
 	return (0);
 }
 
