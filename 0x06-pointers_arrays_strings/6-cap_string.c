@@ -32,7 +32,7 @@ char *cap_string(char *str)
 
 	while (str[i])
 	{
-		if (_cmp(" \t\n,;.!?\"(){}", str[i]))
+		if (_cmp(str[i]))
 			b = 1;
 		if (str[i] >= 'a' && str[i] <= 'z' && b)
 		{
