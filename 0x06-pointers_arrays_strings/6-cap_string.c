@@ -30,7 +30,6 @@ int _cmp(char c)
 
 char *cap_string(char *str)
 {
-	int b = 1;
 	int i = 0;
 
 	while (str[i])
@@ -42,12 +41,8 @@ char *cap_string(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (_cmp(str[i]))
-			b = 1;
-		else if (str[i] >= 'a' && str[i] <= 'z' && b)
+		if (i == 0 || _cmp(str[i - 1]) && str[i] >= 'a' && str[i] <= 'z')
 			str[i] = str[i] - 'a' + 'A';
-		else
-			b = 0;
 		i++;
 	}
 	return (str);
