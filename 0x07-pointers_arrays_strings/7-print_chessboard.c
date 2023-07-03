@@ -16,7 +16,7 @@ void print_chessboard(char (*a)[8])
 		s = a[i];
 		while (s && *s)
 		{
-			if (s != ' ')
+			if (*s != ' ')
 				_putchar(*(s));
 			s++;
 		}
