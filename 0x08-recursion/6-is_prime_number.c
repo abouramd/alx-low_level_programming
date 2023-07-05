@@ -9,10 +9,10 @@
 
 int _ipn(int n, int i)
 {
+	if (i == n)
+		return (1);
 	if (n % i)
 		return (0);
-	if (i >= n / 2)
-		return (1);
 	return (_ipn(n, ++i));
 }
 
