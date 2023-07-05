@@ -11,7 +11,7 @@ int _ipn(int n, int i)
 {
 	if (i == n)
 		return (1);
-	if (n % i)
+	if (!n % i)
 		return (0);
 	return (_ipn(n, ++i));
 }
