@@ -25,9 +25,5 @@ int _ip(char* s, int i, int j)
 
 int is_palindrome(char* n)
 {
-	int i = 0;
-
-	while (n[i])
-		i++;
-	return (_ip(n, 0, --i));
+	return (_ip(n, 0, sizeof(n) - 1));
 }
