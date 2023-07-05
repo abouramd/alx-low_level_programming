@@ -17,6 +17,13 @@ int _ip(char* s, int i, int j)
 	return (_ip(s, ++i, --j));
 }
 
+int _len(char *s)
+{
+	if (*s)
+		return (1 + _len(s + 1));
+	return 0;
+}
+
 /**
  * is_palindrome - palindrome
  * @n: string
@@ -25,5 +32,5 @@ int _ip(char* s, int i, int j)
 
 int is_palindrome(char* n)
 {
-	return (_ip(n, 0, sizeof(n) - 1));
+	return (_ip(n, 0, _len(n) - 1));
 }
