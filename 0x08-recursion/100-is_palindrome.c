@@ -2,13 +2,13 @@
 
 /**
  * _ip - recursion to find palindrome
- * @n: string
+ * @s: string
  * @i: checker
  * @j: checker
  * Return: 1 if is palindrome or 0 if not
  */
 
-int _ip(char* s, int i, int j)
+int _ip(char *s, int i, int j)
 {
 	if (i >= j)
 		return (1);
@@ -17,11 +17,17 @@ int _ip(char* s, int i, int j)
 	return (_ip(s, ++i, --j));
 }
 
+/**
+ * _len - len
+ * @s: string
+ * Return: the len of s
+ */
+
 int _len(char *s)
 {
 	if (*s)
 		return (1 + _len(s + 1));
-	return 0;
+	return (0);
 }
 
 /**
@@ -30,7 +36,7 @@ int _len(char *s)
  * Return: 1 if is prime or 0 if not
  */
 
-int is_palindrome(char* n)
+int is_palindrome(char *n)
 {
 	return (_ip(n, 0, _len(n) - 1));
 }
