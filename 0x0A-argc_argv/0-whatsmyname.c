@@ -3,6 +3,10 @@
 /**
  * main - start of the program
  *
+ * @ac: argc
+ *
+ * @av: argv
+ *
  * Return: 0
  */
 
