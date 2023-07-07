@@ -25,7 +25,7 @@ int ft_check(char *s)
 			printf("Error\n");
 			exit(1);
 		}
-		n += n * 10 + s[i] - 48;
+		n = n * 10 + s[i] - 48;
 		i++;
 	}
 	return (n);
