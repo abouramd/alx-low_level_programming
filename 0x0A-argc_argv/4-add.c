@@ -43,7 +43,7 @@ int ft_check(char *s)
 
 int main(int ac, char **av)
 {
-	int i = 0;
+	int i = 1;
 	int n = 0;
 
 	if (ac != 3)
