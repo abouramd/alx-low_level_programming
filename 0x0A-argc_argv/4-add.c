@@ -13,7 +13,7 @@ int ft_check(char *s)
 	int n = 0;
 	int i = 0;
 
-	if(!s[0])
+	if (!s[0])
 	{
 		printf("Error\n");
 		exit(1);
