@@ -35,6 +35,6 @@ int main(int ac, char **av)
 			n -= 1;
 		ac++;
 	}
-	printf("%d\n",ac);
+	printf("%d\n", ac);
 	return (0);
 }
