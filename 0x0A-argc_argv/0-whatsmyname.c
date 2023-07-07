@@ -8,10 +8,6 @@
 
 int main(int ac, char **av)
 {
-	int i = 0;
-
-	while (av[0][i])
-		_putchar(av[0][i++]);
-	_putchar('\n');
+	printf("%s\n", av[0]);
 	return (0);
 }
