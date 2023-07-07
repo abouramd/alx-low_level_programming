@@ -44,15 +44,10 @@ int ft_check(char *s)
 int main(int ac, char **av)
 {
 	int i = 1;
-	int n = 0;
 
-	if (ac != 3)
-	{
-		printf("Error\n");
-		return (1);
-	}
+	ac = 0;
 	while (av[i])
-		n += ft_check(av[i++]);
-	printf("%d\n", n);
+		ac += ft_check(av[i++]);
+	printf("%d\n", ac);
 	return (0);
 }
