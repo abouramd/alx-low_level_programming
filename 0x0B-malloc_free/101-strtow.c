@@ -44,7 +44,7 @@ char **strtow(char *str)
 		}
 		p[c] = malloc(j + 1);
 		if (!p[c])
-			return (p[c]);
+			return (NULL);
 		m = 0;
 		i -=j;
 		while (j--)
