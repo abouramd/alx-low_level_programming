@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _strdup - copy of the string
- * @str: string
- * Return: returns a pointer to a new string which is a duplicate of the string str
+ * str_concat - concat of two string
+ * @s1: string
+ * @s2: string
+ * Return: returns a pointer to a new string which is concat of the two string
  */
 
 char *str_concat(char *s1, char *s2)
