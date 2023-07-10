@@ -28,6 +28,7 @@ char *argstostr(int ac, char **av)
 	if (!d)
 		return (NULL);
 	c = 0;
+	j = 0;
 	while (av[j])
 	{
 		i = 0;
