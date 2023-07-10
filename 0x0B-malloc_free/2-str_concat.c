@@ -33,6 +33,7 @@ char *str_concat(char *s1, char *s2)
 		d[i] = s1[i];
 		i++;
 	}
+	j = 0;
 	while (s2[j])
 		d[i++] = s2[j++];
 	d[i] = 0;
