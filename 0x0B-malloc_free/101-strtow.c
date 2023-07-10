@@ -1,17 +1,14 @@
 #include "main.h"
 
 /**
- * argstostr - split of strings
- * @str: strings
- * Return: splits a string into words
+ * cou - count words
+ * @str: string
+ * Return: number of word
  */
 
-char **strtow(char *str)
+unsigned int cou(char *str)
 {
-	char **p;
 	unsigned int i = 0;
-	unsigned int j = 0;
-	unsigned int m = 0;
 	unsigned int c = 0;
 
 	while (str && str[i] == ' ')
@@ -24,7 +21,27 @@ char **strtow(char *str)
 			i++;
 		c++;
 	}
-	if (c == 0 || i == 0)
+	if (i == 0)
+		return (0);
+	return (c);
+}
+
+/**
+ * strtow - split of strings
+ * @str: strings
+ * Return: splits a string into words
+ */
+
+char **strtow(char *str)
+{
+	char **p;
+	unsigned int i = 0;
+	unsigned int j = 0;
+	unsigned int m = 0;
+	unsigned int c = 0;
+
+	c = cou(str);
+	if (c == 0)
 		return (NULL);
 	c++;
 	p = malloc(sizeof(char *) * c);
@@ -46,7 +63,7 @@ char **strtow(char *str)
 		if (!p[c])
 			return (NULL);
 		m = 0;
-		i -=j;
+		i -= j;
 		while (j--)
 			p[c][m++] = str[i++];
 		p[c][m] = 0;
