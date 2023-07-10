@@ -4,7 +4,7 @@
  * @grid: the address of the two dimensional grid
  * @height: height of the grid
  * Return: grid of integer.
- */ 
+ */
 
 void free_grid(int **grid, int height)
 {
