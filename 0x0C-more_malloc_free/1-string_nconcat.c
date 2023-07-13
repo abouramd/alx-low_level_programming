@@ -14,14 +14,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0;
 	unsigned int j = 0;
 
-	if (!s1 || !s2)
-	{
-		d = malloc(1);
-		if (!d)
-			return (NULL);
-		*d = 0;
-		return (d);
-	}
 	while (s1 && s1[i])
 		i++;
 	while (s2 && j < n && s2[j++])
