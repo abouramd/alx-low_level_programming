@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_array - creates an array of chars,
+ * _calloc - creates an array of chars,
  * and initializes it with 0.
  * @s: size of array
  * @nmemb: num of elemant
