@@ -2,7 +2,7 @@
 
 /**
  * print_dog - init structer
- * @name: dog name
+ * @d: dog structur
  * Return: no return
  */
 
