@@ -5,7 +5,6 @@
  * @ptr: dog
  * Return: no return
  */
-
 void free_dog(dog_t *ptr)
 {
 	if (ptr)
