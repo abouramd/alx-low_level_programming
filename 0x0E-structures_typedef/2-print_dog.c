@@ -3,7 +3,7 @@
 /**
  * print_dog - init structer
  * @name: dog name
- * Return: no return 
+ * Return: no return
  */
 
 void print_dog(struct dog *d)
