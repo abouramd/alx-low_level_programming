@@ -2,7 +2,9 @@
 #define DOG_H
 
 /**
- * dog - my first structer
+ * struct dog - my first structer
+ *
+ * Discreption: dog strectur
  */
 
 struct dog
