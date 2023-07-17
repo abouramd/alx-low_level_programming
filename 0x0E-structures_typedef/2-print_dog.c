@@ -1,10 +1,8 @@
 #include "dog.h"
 
 /**
- * print dog - init structer
+ * print_dog - init structer
  * @name: dog name
- * @age: dog age
- * @owner: dog owner
  * Return: no return 
  */
 
