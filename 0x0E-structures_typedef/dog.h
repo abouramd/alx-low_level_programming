@@ -3,8 +3,9 @@
 
 /**
  * struct dog - my first structer
- *
- * Discreption: dog strectur
+ * @name: dog name
+ * @age: dog age
+ * @owner: dog owner
  */
 
 struct dog
