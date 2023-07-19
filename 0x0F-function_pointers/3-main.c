@@ -14,7 +14,7 @@ int main(int ac, char **av)
 	{
 		printf("%d\n", (int)((get_op_func(av[2]))(atoi(av[1]), atoi(av[3]))));
 	}
-	else
+	else if (ac == 4)
 		printf("Error\n");
 	return (0);
 }
