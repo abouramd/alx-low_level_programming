@@ -10,11 +10,11 @@
 
 int main(int ac, char **av)
 {
-	if (ac == 4 && get_op_func(av[2]))
+	if (ac != 4 || !get_op_func(av[2]))
 	{
-		printf("%d\n", (int)((get_op_func(av[2]))(atoi(av[1]), atoi(av[3]))));
-	}
-	else if (ac == 4)
 		printf("Error\n");
+		return (1);
+	}
+	printf("%d\n", (int)((get_op_func(av[2]))(atoi(av[1]), atoi(av[3]))));
 	return (0);
 }
