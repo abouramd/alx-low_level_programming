@@ -10,15 +10,17 @@
 
 int main(int ac, char **av)
 {
+	int a;
+	int b;
+
 	if (ac != 4)
 	{
 		printf("Error\n");
 		return (98);
 	}
-	int a = atoi(av[1]);
-	int b = atoi(av[3]);
-
-	if (b == 0 && (av[2] == '/' || av[2] == '%'))
+	a = atoi(av[1]);
+	b = atoi(av[3]);
+	if (b == 0 && (av[2][0] == '/' || av[2][0] == '%'))
 	{
 		printf("Error\n");
 		return (100);
@@ -28,6 +30,6 @@ int main(int ac, char **av)
 		printf("Error\n");
 		return (99);
 	}
-	printf("%d\n", (int)((get_op_func(av[2]))(atoi(av[1]), atoi(av[3]))));
+	printf("%d\n", (int)((get_op_func(av[2]))(a, b)));
 	return (0);
 }
