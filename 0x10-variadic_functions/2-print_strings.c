@@ -16,6 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	while (index++ < n)
 	{
 		char *s = va_arg(p, char *);
+
 		if (s)
 			printf("%s", s);
 		else
