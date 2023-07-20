@@ -10,6 +10,7 @@ void print_all(const char *f, ...)
 {
 	va_list p;
 	unsigned int index = 0;
+	char *s;
 
 	va_start(p, f);
 	while (f && f[index])
@@ -19,7 +20,7 @@ void print_all(const char *f, ...)
 			printf("%c", va_arg(p, int));
 			continue;
 		}
-		if (f[index] == 'd' && ++index)
+		if (f[index] == 'i' && ++index)
 		{
 			printf("%d", va_arg(p, int));
 			continue;
@@ -29,8 +30,7 @@ void print_all(const char *f, ...)
 			printf("%f", va_arg(p, double));
 			continue;
 		}
-		char *s = va_arg(p, char *);
-
+		s = va_arg(p, char *);
 		if (s)
 			printf("%s", s);
 		else
