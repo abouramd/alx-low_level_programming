@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - print all its parameters
+ * print_strings - print all its parameters
  * @separator: separator
  * @n: number of param
  * Return: void
