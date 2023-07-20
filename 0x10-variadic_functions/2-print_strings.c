@@ -7,7 +7,7 @@
  * Return: void
  */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list p;
 	unsigned int index = 0;
@@ -15,7 +15,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(p, n);
 	while (index++ < n)
 	{
-		printf("%s", va_arg(p, char *));
+		char *s = va_arg(p, char *);
+		if (s)
+			printf("%s", va_arg(p, char *));
+		else
+			printf("(nil)");
 		if (index != n && separator)
 			printf("%s", separator);
 	}
