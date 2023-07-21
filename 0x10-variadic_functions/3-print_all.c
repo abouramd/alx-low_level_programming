@@ -1,5 +1,29 @@
 #include "variadic_functions.h"
 
+void pint(va_list p)
+{
+       printf("%d", va_arg(p, int));
+}
+
+void pchar(va_list p)
+{
+       printf("%c", va_arg(p, int));
+}
+
+void pfloat(va_list p)
+{
+       printf("%f", va_arg(p, double));
+}
+
+void pstring(va_list p)
+{
+	char *s = va_arg(p, char *);
+	if (s)
+		printf("%s", s);
+	else
+		printf("(nil)"); 
+}
+
 /**
  * print_all - print all its parameters
  * @f: format
@@ -9,33 +33,28 @@
 void print_all(const char *f, ...)
 {
 	va_list p;
+	void (*ptr[])(va_list) = {
+		&pchar,
+		&pint,
+		&pfloat,
+		&pstring
+	};
+	char *name = "cifs";
 	unsigned int index = 0;
-	char *s;
+	int j;
+	int  t = 0;
 
 	va_start(p, f);
 	while (f && f[index])
 	{
-		if (f[index] == 'c' && ++index)
+		j = 0;
+		while (name[j])
 		{
-			printf("%c", va_arg(p, int));
-			continue;
+			if (name[j] == f[index] && ((t == 1 && printf(". ")) ||(t = 1)))
+				(ptr[j])(p);
+			j++;
 		}
-		if (f[index] == 'i' && ++index)
-		{
-			printf("%d", va_arg(p, int));
-			continue;
-		}
-		while (f[index] == 'f' && ++index)
-		{
-			printf("%f", va_arg(p, double));
-			continue;
-		}
-		s = va_arg(p, char *);
-		if (s)
-			printf("%s", s);
-		else
-			printf("(nil)");
-		index++;
+		index ++;
 	}
 	va_end(p);
 	printf("\n");
