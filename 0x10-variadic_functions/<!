@@ -38,13 +38,12 @@ void pfloat(va_list p)
 void pstring(va_list p)
 {
 	char *s = va_arg(p, char *);
-
 	if (s)
 	{
 		printf("%s", s);
 		return;
 	}
-	printf("(nil)");
+	printf("(nil)"); 
 }
 
 /**
@@ -73,15 +72,11 @@ void print_all(const char *f, ...)
 		j = 0;
 		while (name[j])
 		{
-			if ((name[j] == f[index] && t == 1 && printf(", "))
-				|| name[j] == f[index])
-			{
+			if (name[j] == f[index] && ((t == 1 && printf(", ")) ||(t = 1)))
 				(ptr[j])(p);
-				t = 1;
-			}
 			j++;
 		}
-		index++;
+		index ++;
 	}
 	va_end(p);
 	printf("\n");
