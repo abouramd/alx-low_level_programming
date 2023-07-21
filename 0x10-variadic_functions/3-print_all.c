@@ -19,9 +19,11 @@ void pstring(va_list p)
 {
 	char *s = va_arg(p, char *);
 	if (s)
+	{
 		printf("%s", s);
-	else
-		printf("(nil)"); 
+		return;
+	}
+	printf("(nil)"); 
 }
 
 /**
