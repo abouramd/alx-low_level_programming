@@ -50,7 +50,7 @@ void print_all(const char *f, ...)
 		j = 0;
 		while (name[j])
 		{
-			if (name[j] == f[index] && ((t == 1 && printf(". ")) ||(t = 1)))
+			if (name[j] == f[index] && ((t == 1 && printf(", ")) ||(t = 1)))
 				(ptr[j])(p);
 			j++;
 		}
