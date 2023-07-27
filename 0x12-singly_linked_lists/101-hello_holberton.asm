@@ -1,18 +1,21 @@
 section .data
-    hello db 'Hello, Holberton', 0
+    hello db 'Hello, Holberton', 0   ; Null-terminated string with newline character (0xA) at the end
 
 section .text
-    global _start
+    global main
 
 extern printf, exit
 
-_start:
-    mov rdi, hello
-    xor rax, rax
+main:
+    ; Call printf to print the string
+    mov rdi, hello    ; First argument: address of the format string
+    xor rax, rax      ; Clear RAX (indicating the function will take a variable number of arguments)
     call printf
 
-    xor edi, edi
+    ; Call exit to terminate the program
+    xor edi, edi      ; Clear EDI (exit code 0)
     call exit
 
 section .bss
+    ; Reserve some space for printf to use as a working buffer
     resb 64
