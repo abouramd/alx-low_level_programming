@@ -1,5 +1,5 @@
 section .data
-	hello db 'Hello, Holberton\n', 0   ; Null-terminated string with newline character (0xA) at the end
+	hello db 'Hello, Holberton', 0   ; Null-terminated string with newline character (0xA) at the end
 
 section .text
 	global main
