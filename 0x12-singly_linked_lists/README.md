@@ -2,8 +2,6 @@
 
 ![Linked Lists](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/229/giphy-3.gif)
 
-This repository contains the CAlgorithmData structure project for learning about linked lists in C. The project is assigned to you by Julien Barbier and is worth 1 weight. The project will begin on Jul 27, 2023, at 4:00 AM and must be completed by Jul 28, 2023, at 4:00 AM. A checker was released on Jul 27, 2023, at 10:00 AM, and an auto-review will be launched at the deadline.
-
 ## Concepts
 
 In this project, we will focus on the following concept:
