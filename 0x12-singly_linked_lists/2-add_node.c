@@ -3,6 +3,7 @@
 /**
  * add_node - add node
  * @h: head of the list
+ * @str: the content
  * Return: the new head
  */
 
