@@ -1,7 +1,7 @@
 #include "lists.h"
 #include <stddef.h>
 
-int checkPrev(listint_t *h, listint_t *node, size_t count)
+int checkPrev(listint_t *h, const listint_t *node, size_t count)
 {
 	size_t i = 0;
 
