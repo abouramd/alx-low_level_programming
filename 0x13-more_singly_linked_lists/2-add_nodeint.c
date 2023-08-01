@@ -3,7 +3,7 @@
 /**
  * add_nodeint - add node
  * @h: head of the listint
- * @str: the content
+ * @n: the content
  * Return: the new head
  */
 
