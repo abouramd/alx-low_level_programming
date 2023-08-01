@@ -1,17 +1,23 @@
 #include "lists.h"
+#include <stddef.h>
 
 /**
  * free_listint_safe - free a linked listint
  * @head: struct listint_t
- * Return: void
+ * Return: num of node
  */
 
-void free_listint_safe(listint_t **head)
+size_t free_listint_safe(listint_t **head)
 {
+	size_t count = 0;
+	listint_t *tmp;
+
 	if (head && *head)
 	{
-		free_listint_safe(&(*head)->next);
-		free(*head);
-		*head = NULL;
+		tmp = (*head);
+		*head = (*head)->next;
+		free(tmp);
+		count++;
 	}
+	return (count);
 }
