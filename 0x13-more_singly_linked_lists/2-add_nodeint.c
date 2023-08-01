@@ -7,7 +7,7 @@
  * Return: the new head
  */
 
-listint_t *add_node(listint_t **h, const int n)
+listint_t *add_nodeint(listint_t **h, const int n)
 {
 	listint_t *new = NULL;
 
