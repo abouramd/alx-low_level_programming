@@ -1,6 +1,14 @@
 #include "lists.h"
 #include <stddef.h>
 
+/**
+ * checkPrev - checkPrev
+ * @h: the list
+ * @node:the node to check
+ * @conut: index of the node
+ * Return:true or false
+ */
+
 int checkPrev(listint_t *h, const listint_t *node, size_t count)
 {
 	size_t i = 0;
@@ -32,7 +40,7 @@ size_t print_listint_safe(const listint_t *head)
 	while (head)
 	{
 		if (checkPrev(tmp, head, count))
-			return (98);
+			return (count);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 		count++;
