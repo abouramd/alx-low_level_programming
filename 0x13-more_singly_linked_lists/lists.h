@@ -8,7 +8,7 @@
  * struct listint_s - singly linked list
  * @n: integer
  * @next: points to the next node
- *
+ *gcc -Wall -pedantic -Werror -Wextra -std=gnu89 1-main.c 1-listint_len.c -o b
  * Description: singly linked list node structure
  *
  */
@@ -19,6 +19,6 @@ typedef struct listint_s
 } listint_t;
 
 size_t print_listint(const listint_t *h);
-size_t listint_len(const listint_t *h)
+size_t listint_len(const listint_t *h);
 
 #endif
