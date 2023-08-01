@@ -28,7 +28,7 @@ size_t print_listint_safe(const listint_t *head)
 	size_t count = 0;
 	listint_t *tmp;
 
-	tmp = head;
+	tmp = (listint_t *)head;
 	while (head)
 	{
 		if (checkPrev(tmp, head, count))
