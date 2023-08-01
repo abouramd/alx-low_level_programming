@@ -17,7 +17,7 @@ size_t free_listint_safe(listint_t **head)
 		tmp = (*head);
 		*head = (*head)->next;
 		free(tmp);
-		if (head && tmp <= head)
+		if (*head && tmp <= *head)
 		{
 			(*head) = NULL;
 			return (98);
