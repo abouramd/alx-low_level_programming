@@ -1,11 +1,10 @@
 #include "lists.h"
 
 /**
- * insert_nodeint_at_index - insert nodeint at index
+ * delete_nodeint_at_index - delete nodeint at index
  * @head: struct listint_t
  * @idx: index of the node
- * @n: the data of the new node
- * Return: the addr of new node
+ * Return: 1 if it's work, -1 if it's fail
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int idx)
