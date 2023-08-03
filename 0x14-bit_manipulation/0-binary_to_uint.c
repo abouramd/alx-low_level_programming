@@ -23,6 +23,6 @@ unsigned int binary_to_uint(const char *b)
 			res += 2 * pow;
 		pow *= 2;
 	}
-	return res;
+	return (res);
 }
 
