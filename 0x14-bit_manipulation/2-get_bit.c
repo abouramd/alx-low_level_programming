@@ -12,13 +12,14 @@
 
 int get_bit(unsigned long n, unsigned int index)
 {
-	int i = 0;
+	unsigned int i = 0;
 
 	while (n)
 	{
 		if (i == index)
-			return (n | 1);
+			return (n & 1);
 		n = (n >> 1);
+		i++;
 	}
 	return (-1);
 }
