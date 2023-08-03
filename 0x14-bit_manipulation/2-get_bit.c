@@ -20,6 +20,6 @@ int get_bit(unsigned long n, unsigned int index)
 		n = (n >> 1);
 		i++;
 	} while (n);
-	return (-1);
+	return (0);
 }
 
