@@ -13,9 +13,12 @@
 
 int clear_bit(unsigned long int *n, unsigned int index)
 {
+	unsigned long int num;
 	if (!n)
 		return (-1);
-	(*n) &= (LONG_MAX << index + 1 | LONG_MAX << index);
+	num = ~(*n);
+	num |= (1 << index);
+	*n = ~num;
 	return (1);
 }
 
