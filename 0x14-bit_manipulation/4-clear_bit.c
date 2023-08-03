@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
  * clear_bit - set the value of a bit to 0
@@ -14,7 +13,8 @@
 int clear_bit(unsigned long int *n, unsigned int index)
 {
 	unsigned long int num;
-	if (!n)
+	
+	if (!n || index >= sizeof(unsigned long int) * 8)
 		return (-1);
 	num = ~(*n);
 	num |= (1 << index);
