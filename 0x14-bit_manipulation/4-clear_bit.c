@@ -1,7 +1,8 @@
 #include "main.h"
+#include <limits.h>
 
 /**
- * set_bit - set the value of a bit to 1
+ * clear_bit - set the value of a bit to 0
  *
  * @n: pointer to the memory area of the number
  *
@@ -10,11 +11,11 @@
  * Return: 1 if it worked, or -1 if an error occurred
  */
 
-int set_bit(unsigned long int *n, unsigned int index)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
 	if (!n)
 		return (-1);
-	(*n) |= 1 << index;
+	(*n) &= (LONG_MAX << index + 1 | LONG_MAX << index);
 	return (1);
 }
 
