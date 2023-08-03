@@ -9,7 +9,7 @@
 void print_binary(unsigned long int n)
 {
 	do {
-		printf("%ld", (n & 1));
+		_putchar((n & 1) + 48);
 		n = (n >> 1);
 	} while (n);
 }
