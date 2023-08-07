@@ -17,8 +17,8 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 	int rfd;
 	char c[1025];
 
-	if (!rfilename || !wfilename)
-		return (97);
+	if (!*wfilename)
+		return (0);
 	rfd = open(rfilename, O_RDONLY);
 	if (rfd < 0)
 	{
@@ -58,7 +58,7 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 
 int main(int ac, char **av)
 {
-	if (ac != 3 || !*av[1] || !*av[2])
+	if (ac != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
