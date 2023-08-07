@@ -26,17 +26,13 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 		return (98);
 	}
 	wfd = open(wfilename, O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	if (wfd < 0 && 10 > close(rfd))
+	while (wfd > 0 && (i = read(rfd, c, 1024)))
+		if (i == -1 || (i = write(wfd, c, i)) == -1)
+			break;
+	if (i == -1 || wfd < 0)
 	{
 		fprintf(stderr, "Error: Can't write to %s\n", wfilename);
 		return (99);
-	}
-	while ((i = read(rfd, c, 1024)))
-	{
-		write(wfd, c, i);
-		if (i == -1)
-			return (99);
-
 	}
 	if (close(rfd) == -1)
 	{
