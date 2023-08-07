@@ -18,7 +18,7 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 	char c[1025];
 
 	if (!rfilename || !wfilename)
-		return (-1);
+		return (97);
 	rfd = open(rfilename, O_RDONLY, 0644);
 	if (rfd < 0)
 	{
@@ -47,6 +47,13 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 	return (0);
 }
 
+
+/**
+ * main - start
+ * @ac: num of args
+ * @av: args of programe
+ * Return: 0 or other value if an error happen
+ */
 
 int main(int ac, char **av)
 {
