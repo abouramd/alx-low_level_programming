@@ -22,7 +22,7 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 	rfd = open(rfilename, O_RDONLY, 0644);
 	if (rfd < 0)
 	{
-		fprintf(stderr, "Error: Can't read from file %s\n", rfilename);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", rfilename);
 		return (98);
 	}
 	wfd = open(wfilename, O_CREAT | O_TRUNC | O_WRONLY, 0664);
@@ -31,17 +31,17 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 			break;
 	if (i == -1 || wfd < 0)
 	{
-		fprintf(stderr, "Error: Can't write to %s\n", wfilename);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", wfilename);
 		return (99);
 	}
 	if (close(rfd) == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d\n", rfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", rfd);
 		return (100);
 	}
 	if (close(wfd) == -1)
 	{
-		fprintf(stderr, "Error: Can't close fd %d\n", wfd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", wfd);
 		return (100);
 	}
 	return (0);
@@ -52,7 +52,7 @@ int main(int ac, char **av)
 {
 	if (ac != 3)
 	{
-		fprintf(stderr, "Usage: cp file_from file_to\n");
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		return (97);
 	}
 	return (read_write_textfile(av[1], av[2]));
