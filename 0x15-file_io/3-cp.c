@@ -19,13 +19,14 @@ ssize_t read_write_textfile(const char *rfilename, const char *wfilename)
 
 	if (!rfilename || !wfilename)
 		return (97);
-	rfd = open(rfilename, O_RDONLY, 0644);
+	rfd = open(rfilename, O_RDONLY);
 	if (rfd < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", rfilename);
 		return (98);
 	}
-	wfd = open(wfilename, O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	wfd = open(wfilename, O_CREAT | O_TRUNC | O_WRONLY, S_IRUSR \
+			| S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH);
 	while (wfd > 0 && (i = read(rfd, c, 1024)))
 		if (i == -1 || (i = write(wfd, c, i)) == -1)
 			break;
